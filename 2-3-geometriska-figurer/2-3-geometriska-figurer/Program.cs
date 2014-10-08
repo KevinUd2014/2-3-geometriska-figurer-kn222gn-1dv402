@@ -8,8 +8,26 @@ namespace _2_3_geometriska_figurer
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            
         }
+
     }
+    private Shape CreateShape(ShapeType, shapeType)
+    {
+          
+    }
+
+    private double ReadDoubleGreaterThanZero(string prompt)
+   {
+        
+   }
+    private void ViewMenu()
+   {
+   }
+    private void ViewShapeDetail(Shape shape)
+   {
+   }
+
 }

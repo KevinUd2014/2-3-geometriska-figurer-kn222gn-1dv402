@@ -32,6 +32,8 @@ namespace _2_3_geometriska_figurer
             set;
         }
 
+
+    }
         protected Shape(double length, double width)
         {
 
@@ -42,5 +44,4 @@ namespace _2_3_geometriska_figurer
 
         }
 
-    }
 }
