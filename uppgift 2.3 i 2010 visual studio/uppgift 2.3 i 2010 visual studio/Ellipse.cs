@@ -7,7 +7,7 @@ namespace uppgift_2._3_i_2010_visual_studio
 {
     class Ellipse : Shape
     {
-        public double Area
+        public override double Area
         {
             get
             {
@@ -15,7 +15,7 @@ namespace uppgift_2._3_i_2010_visual_studio
             }
         }
 
-        public double Perimeter
+        public override double Perimeter
         {
             get
             {

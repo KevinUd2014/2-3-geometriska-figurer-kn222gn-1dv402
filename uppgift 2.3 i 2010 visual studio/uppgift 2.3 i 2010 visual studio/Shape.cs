@@ -5,53 +5,51 @@ using System.Text;
 
 namespace uppgift_2._3_i_2010_visual_studio
 {
-    class Shape
+    abstract class Shape
     {
-        private double _length;
+        private double _length; // två variablar
         private double _width;
 
-        public abstract double area
+        public abstract double Area // ska troligen skicka in arean!
         {
             get; 
         }
 
-        public double Length
+        public double Length //här skickar vi in längden och kollar så att den är av rätt storlek
         {
             get
           {
-            return Length;
+            return _length;
           }
+          
             set 
           {
-            if ( value <= 0 )
-          {
-                {throw new ArgumentException("The length is not even zero please try again");}
-                Length = value;
-          }
-        
-        }
-        }
-        public abstract double Perimeter
-        {
-            get
+            if ( value <= 0 ) // och skriver ut om den nu skulle vara av fel storlek
             {
-                return Perimeter;
+                {throw new ArgumentException("The length is not even zero please try again");}
             }
+            _length = value; // value är det värde som nu Längden får!
+        
+          }
+        }
+        public abstract double Perimeter // här får bara perimeter ett värde från antingen Ellipse eller Rektangel
+        {
+            get;
         }
 
         public double Width
         {
             get
             {
-                return Width;
+                return _width;
             }
             set
             {
-                if(value <= 0)
+                if(Width <= 0)
                 {
                     {throw new ArgumentException("The Width is not even zero please try again");}
-                    Width = value;
                 }
+                _width = value;
             }
         }
 
@@ -66,7 +64,7 @@ namespace uppgift_2._3_i_2010_visual_studio
         {
             StringBuilder values = new StringBuilder();
 
-            values.AppendFormat("(0) : (1) : (2:F1) : (3:F1) ", Length, Width, area, Perimeter);
+            values.AppendFormat("(0) : (1) : (2:F1) : (3:F1) ", Length, Width, Area, Perimeter);
             return values.ToString();
 
         }
