@@ -26,7 +26,7 @@ namespace uppgift_2._3_i_2010_visual_studio
           {
             if ( value <= 0 ) // och skriver ut om den nu skulle vara av fel storlek
             {
-                {throw new ArgumentException("The length is not even zero please try again");}
+                throw new ArgumentException();
             }
             _length = value; // value är det värde som nu Längden får!
         
@@ -45,9 +45,9 @@ namespace uppgift_2._3_i_2010_visual_studio
             }
             set
             {
-                if(Width <= 0)
+                if(value <= 0)
                 {
-                    {throw new ArgumentException("The Width is not even zero please try again");}
+                     throw new ArgumentException();
                 }
                 _width = value;
             }
@@ -64,7 +64,7 @@ namespace uppgift_2._3_i_2010_visual_studio
         {
             StringBuilder values = new StringBuilder();
 
-            values.AppendFormat("(0) : (1) : (2:F1) : (3:F1) ", Length, Width, Area, Perimeter);
+            values.AppendFormat("Length   : {0,12:F2}\nWidth    : {1,12:F2}\nArea     : {2,12:F1}\nPerimeter: {3,12:F1} ", Length, Width, Area, Perimeter);
             return values.ToString();
 
         }
